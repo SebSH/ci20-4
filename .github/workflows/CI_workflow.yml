@@ -12,10 +12,6 @@ jobs:
               run: |
                 apt update && apt install -y git
                 curl --show-error --silent https://getcomposer.org/installer | php
-                php composer install --no-scripts --no-progress
+                php composer.phar install --no-scripts --no-progress
 
-            - name: Run test
-              run: |
-                bin/phpunit tests/Unit
-                bin/phpunit tests/Integration
-                php vendor/bin/behat
+            
