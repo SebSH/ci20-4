@@ -11,8 +11,6 @@ jobs:
             - name: before_script
               run: |
                 composer install
-        
-        steps:
             - name: Run test
               run: |
                 bin/phpunit tests/Unit
