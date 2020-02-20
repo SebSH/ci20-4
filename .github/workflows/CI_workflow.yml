@@ -10,9 +10,7 @@ jobs:
         steps:
             - name: before_script
               run: |
-                composer install
-        
-        steps:
+              php bin/composer.phar install --no-scripts --no-progress
             - name: Run test
               run: |
                 bin/phpunit tests/Unit
