@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: before_script
-              uses: docker://php:7.2
+              uses: docker://composer:latest
               with:
                 args: php bin/composer.phar install --no-scripts --no-progress
             - name: Run test
