@@ -16,6 +16,6 @@ jobs:
 
             - name: Run test
               run: |
-              bin/phpunit tests/Unit
-              bin/phpunit tests/Integration
-              php vendor/bin/behat
+                bin/phpunit tests/Unit
+                bin/phpunit tests/Integration
+                php vendor/bin/behat
