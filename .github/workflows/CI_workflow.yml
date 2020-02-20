@@ -10,7 +10,7 @@ jobs:
         steps:
             - name: before_script
               use: docker://composer:latest
-              whith:
+              with:
                 args: install
             - name: Run test
               run: |
