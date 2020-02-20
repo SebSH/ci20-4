@@ -9,8 +9,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: before_script
-              run: |
-                composer install
+              use: docker://composer:latest
+              whith:
+                args: install
             - name: Run test
               run: |
                 bin/phpunit tests/Unit
