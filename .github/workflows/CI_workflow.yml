@@ -8,6 +8,7 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
+            - uses: action/checkout@v2
             - name: before_script
               run: |
                 composer install
