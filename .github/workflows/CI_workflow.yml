@@ -10,8 +10,9 @@ jobs:
         steps:
             - name: before_script
               run: |
-                apt update && apt install -y git
-                curl --show-error --silent https://getcomposer.org/installer | php
-                php composer.phar install --no-scripts --no-progress
-
-            
+                composer install
+            - name: Run test
+              run: |
+                bin/phpunit tests/Unit
+                bin/phpunit tests/Integration
+                php vendor/bin/behat
