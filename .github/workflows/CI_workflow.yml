@@ -11,7 +11,7 @@ jobs:
             - name: before_script
               uses: docker://php:7.2
               with:
-                args: composer install
+                args: php bin/composer.phar install --no-scripts --no-progress
             - name: Run test
               run: |
                 bin/phpunit tests/Unit
